@@ -12,7 +12,7 @@
 #include "units_functions.h"
 
 int main(int argc, char const *argv[]) {
-  double milliliter_value{};
+  double milliliter_value{0.0};
 
   std::cout << "Enter ml: ";
   std::cin >> milliliter_value;
@@ -22,10 +22,8 @@ int main(int argc, char const *argv[]) {
   double ounce_value = MlToOz(milliliter_value);
   double cup_value = MlToCup(milliliter_value);
 
-  std::cout << milliliter_value << "ml = " << tsp_value;
-  std::cout << milliliter_value << "tsp = " << tbsp_value;
-  std::cout << milliliter_value << "tbsp = " << ounce_value;
-  std::cout << milliliter_value << "oz = " << cup_value;
-  
+  std::cout << milliliter_value << " ml = " << tsp_value
+            << " tsp = " << tbsp_value << " tbsp = " << ounce_value
+            << " oz = " << cup_value << " cups" << '\n';
   return 0;
 }
